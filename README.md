@@ -68,7 +68,28 @@ This implementation includes the following libraries:
 
 
 
+## **Document Used**  
 
+The following document is utilized by the bot to generate **Retrieval-Augmented Generation (RAG) responses**, ensuring context-aware and accurate answers:  
+
+📄 **[Living with Snakes](docs/living_with_snakes.pdf)**  
+
+When the `@pdf` tag is used in a message, the bot retrieves relevant information from this document to enhance its responses. If the tag is not used, a standard AI-generated response is provided.
+
+
+
+## **Demonstration Screenshots**  
+Below are some screenshots showcasing the application in action:  
+
+### Homepage  
+![Homepage](screenshots/homepage.png)  
+
+### Demo Chat  
+![Demo Chat](screenshots/demo_chat_1.png)  
+![Demo Chat](screenshots/demo_chat_2.png)  
+![Demo Chat](screenshots/demo_chat_3.png) 
+![Demo Chat](screenshots/demo_chat_4.png) 
+![Demo Chat](screenshots/demo_chat_5.png) 
 
 
 
