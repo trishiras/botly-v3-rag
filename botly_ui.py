@@ -34,8 +34,9 @@ class BotlyUI:
             session (streamlit.session_state): The session state.
         """
 
-        self.page_title = "Botly"
+        self.page_title = " Botly"
         self.page_title_icon = "\U0001f916"
+        self.creator = "   by Sumit Kumar  👨‍💻"
         self.page_logo = logo(
             image=str(
                 os.path.join(
@@ -167,9 +168,7 @@ class BotlyUI:
             page_title_icon (str): The icon to display in the title bar.
             session (streamlit.session_state): The session state.
         """
-        title(
-            self.page_title + self.page_title_icon,
-        )
+        title(self.page_title_icon + self.page_title)  # + self.creator,
 
         if (
             self.session.document_saved
