@@ -14,6 +14,7 @@ from streamlit import (
     chat_message,
     file_uploader,
     session_state,
+    set_page_config,
 )
 
 
@@ -34,17 +35,23 @@ class BotlyUI:
             session (streamlit.session_state): The session state.
         """
 
-        self.page_title = " Botly"
+        self.page_title = "Botly"
         self.page_title_icon = "\U0001f916"
         self.creator = "   by Sumit Kumar  👨‍💻"
         self.page_logo = logo(
             image=str(
                 os.path.join(
                     os.getcwd(),
-                    "resources/botly.webp",
+                    "resources/botly_icon.png",
                 )
             ),
             size="large",
+            icon_image=str(
+                os.path.join(
+                    os.getcwd(),
+                    "resources/botly_icon.png",
+                )
+            ),
         )
         self.session = session_state
         self.ui()
@@ -168,7 +175,30 @@ class BotlyUI:
             page_title_icon (str): The icon to display in the title bar.
             session (streamlit.session_state): The session state.
         """
-        title(self.page_title_icon + self.page_title)  # + self.creator,
+        # title(self.page_title_icon + self.page_title)  # + self.creator,
+        set_page_config(page_title=self.page_title)
+        markdown(
+            """
+
+            <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+            .orbitron-title {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 36px;
+                color: #00bfff;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            </style>
+
+            <div class="orbitron-title">
+                Botly
+            </div>
+        """,
+            unsafe_allow_html=True,
+        )
 
         if (
             self.session.document_saved
