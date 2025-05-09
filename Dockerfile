@@ -24,7 +24,7 @@ RUN apt-get update && \
 
 
 # Install Ollama
-RUN curl -fsSL https://ollama.com/install.sh | sh
+RUN curl -fsSL https://ollama.com/install.sh | sh || true
 
 
 
